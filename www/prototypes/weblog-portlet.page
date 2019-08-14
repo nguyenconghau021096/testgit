@@ -1,0 +1,38 @@
+# -*- tcl-*-
+# $Id$
+::xowiki::Object new -title "Weblog" -text {
+  #
+  # A sample Weblog object.
+  #
+  my initialize -parameter {
+    {-page_size:integer 10}
+    {-page_number:integer 1}
+    {-summary:boolean 0}
+    {-category_id ""}
+    {-date ""}
+    {-tag ""}
+    {-ptag ""}
+    {-entries_of ""}
+  }
+
+  #
+  # The following definition is the default rendering per 
+  # weblog entry. This is executed in the context of every displayed page.
+  #
+  Class create EntryRenderer -instproc render {} {
+    return "Not available"
+  }
+
+  #
+  # The following definition is the renderer for the full weblog.
+  # This is executed in the context of the whole weblog object
+  #
+  Class create WeblogRenderer -instproc render {} {
+    return "Not available"
+  }
+  
+  my proc content {} {
+    return "Not available"
+  }
+  
+}

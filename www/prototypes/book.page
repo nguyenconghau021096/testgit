@@ -1,0 +1,4 @@
+::xowiki::Page new -title "Book" -text {
+{{set-parameter template_file view-default}}
+<p>Not available</p>
+}
